@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+
+<body>
+    <form>
+        <div class="box">
+            <label for="name">Name：</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="box">
+            <label for="age">Age：</label>
+            <input type="text" id="age" name="age">
+        </div>
+        <div class="box">
+            <label for="gender">Gender：</label>
+            <input type="text" id="gender" name="gender">
+        </div>
+        <div class="box">
+            <label for="email">Email：</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="box">
+            <label for="phone">Phone：</label>
+            <input type="text" id="phone" name="phone">
+        </div>
+        <input type="submit" value="Submit" onclick="submitForm(event)">
+    </form>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td id="nameCell"></td>
+            <td id="ageCell"></td>
+            <td id="genderCell"></td>
+            <td id="emailCell"></td>
+            <td id="phoneCell"></td>
+        </tr>
+    </table>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const gender = document.getElementById("gender").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+
+            document.getElementById("nameCell").innerHTML = name;
+            document.getElementById("ageCell").innerHTML = age;
+            document.getElementById("genderCell").innerHTML = gender;
+            document.getElementById("emailCell").innerHTML = email;
+            document.getElementById("phoneCell").innerHTML = phone;
+        }
+    </script>
+</body>
+
+</html>

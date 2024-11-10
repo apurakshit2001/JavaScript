@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Step 3</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="demo">Hello World</h1>
+    <button onclick="handleClick()">Click</button>
+    <script>
+        function handleClick() {
+            let demo = document.getElementById("demo");
+
+            if (demo.innerHTML === "Good Bye World") {
+                demo.innerHTML = "Hello World";
+            } else {
+                demo.innerHTML = "Good Bye World";
+            }
+        }
+    </script>
+</body>
+
+</html>

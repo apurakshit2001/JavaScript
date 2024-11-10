@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Form.css"> 
+</head>
+
+<body>
+    <form onsubmit="submitForm(event)">
+        <div class="box">
+            <label for="name">Name：</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="box">
+            <label for="age">Age：</label>
+            <input type="text" id="age" name="age" required>
+        </div>
+        <div class="box">
+            <label for="gender">Gender：</label>
+            <input type="text" id="gender" name="gender" required>
+        </div>
+        <div class="box">
+            <label for="email">Email：</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="box">
+            <label for="phone">Phone：</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <table id="dataTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </table>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); 
+
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const gender = document.getElementById("gender").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+
+            const table = document.getElementById("dataTable");
+            const newRow = table.insertRow();
+
+            newRow.insertCell(0).innerText = name;
+            newRow.insertCell(1).innerText = age;
+            newRow.insertCell(2).innerText = gender;
+            newRow.insertCell(3).innerText = email;
+            newRow.insertCell(4).innerText = phone;
+
+            event.target.reset();
+        }
+    </script>
+</body>
+
+</html>
