@@ -12,7 +12,7 @@
         b = 30;
         console.log(b);
         const c = 40;
-        // c = 50;
+        c = 50;
         console.log(c);
 
         // var a = 50;
